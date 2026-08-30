@@ -12,14 +12,14 @@
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   :root {
-    --bg:      #0a0a0a;
-    --surface: #111111;
-    --gold:    #c9a96e;
-    --gold-dim:#9a7a4a;
-    --white:   #ffffff;
-    --muted:   #aaaaaa;
-    --border:  #1e1e1e;
-    --amber:   #d97706;
+    --bg:      #0b0b12;
+    --surface: #121621;
+    --gold:    #d4af6a;
+    --gold-dim:#9b7f52;
+    --white:   #f5f1ea;
+    --muted:   #b9b3aa;
+    --border:  #1f2430;
+    --amber:   #dca14d;
     --font-display: 'Playfair Display', Georgia, serif;
     --font-body:    'Inter', system-ui, sans-serif;
   }
@@ -633,7 +633,7 @@
   .about-avatar-corner.br { bottom: 0; right: 0; border-width: 0 1px 1px 0; }
 
   /* ── Skills ───────────────────────────────────── */
-  #skills { background: #0c0c0c; }
+  #skills { background: var(--bg); }
 
   .skills-grid {
     display: grid;
@@ -1084,13 +1084,11 @@
       <span class="skill-float sf-react">⚛ React</span>
       <span class="skill-float sf-django">🐍 Django</span>
       <span class="skill-float sf-cpp">⚡ C++</span>
-      <span class="skill-float sf-ts">𝗧 TypeScript</span>
       <span class="skill-float sf-ai">🤖 AI / ML</span>
-      <span class="skill-float sf-esp">📡 ESP32</span>
-
+      <span class="skill-float sf-esp">📡 ESP32</span>      
       <!-- Central avatar ring -->
       <div class="avatar-ring-outer">
-        <div class="avatar-ring-inner">AT</div>
+        <div class="avatar-ring-inner">Skills</div>
       </div>
 
       <!-- Available chip -->
@@ -1101,19 +1099,13 @@
     </div>
   </div>
 
-  <!-- Scroll indicator -->
-  <div class="scroll-indicator">
-    <div class="scroll-line"></div>
-    <div class="scroll-dot"></div>
-  </div>
-
 </section>
 
 <!-- ── About ─────────────────────────────────────── -->
 <section id="about">
   <div class="section-inner">
     <p class="section-label reveal">About Me</p>
-    <h2 class="section-title reveal">The Person<br>Behind the Code</h2>
+    <h2 class="section-title reveal">The Person<br>Behind the logics</h2>
     <div class="about-grid">
       <div>
         <p class="about-bio reveal">
@@ -1121,28 +1113,28 @@
         </p>
         <table class="about-table reveal reveal-delay-1">
           <tr>
-            <td>Name</td>
+            <td>Name : </td>
             <td>Argav Thakur</td>
           </tr>
           <tr>
-            <td>University</td>
+            <td>University : </td>
             <td>Lovely Professional University</td>
           </tr>
           <tr>
-            <td>Degree</td>
+            <td>Degree : </td>
             <td>B.Tech — Computer Science Engineering</td>
           </tr>
           <tr>
-            <td>Status</td>
+            <td>Status : </td>
             <td>Hostel Resident · Open to Internships</td>
           </tr>
           <tr>
-            <td>Interests</td>
+            <td>Interests : </td>
             <td>Full-Stack · AI · SaaS · Robotics · Open Source</td>
           </tr>
         </table>
         <div class="about-btns reveal reveal-delay-2">
-          <a href="#" class="btn btn-gold">↓ Download CV</a>
+          <a href="Argav's CV.pdf" class="btn btn-gold" download="Argav's CV.pdf">↓ Download CV</a>
           <a href="https://github.com/argavthakur-maker" target="_blank" rel="noopener" class="btn btn-outline">GitHub Profile →</a>
         </div>
       </div>
@@ -1159,70 +1151,69 @@
 <section id="skills">
   <div class="section-inner">
     <p class="section-label reveal">Technical Skills</p>
-    <h2 class="section-title reveal">What I Build<br>& How I Build It</h2>
+    <h2 class="section-title reveal">What I Build<br>and How I Build It</h2>
 
     <div class="skills-grid">
       <div class="skill-card reveal">
         <p class="skill-card-title">Languages</p>
         <div class="skill-tags">
-          <span class="skill-tag">C</span>
-          <span class="skill-tag">C++</span>
-          <span class="skill-tag">JavaScript</span>
-          <span class="skill-tag">TypeScript</span>
-          <span class="skill-tag">Python</span>
+          <span class="skill-tag">🔵 C</span>
+          <span class="skill-tag">⚡ C++</span>
+          <span class="skill-tag">🟨 JavaScript</span>
+          <span class="skill-tag">🐍 Python</span>
         </div>
       </div>
       <div class="skill-card reveal reveal-delay-1">
         <p class="skill-card-title">Frontend</p>
         <div class="skill-tags">
-          <span class="skill-tag">React.js</span>
-          <span class="skill-tag">Vite</span>
-          <span class="skill-tag">Tailwind CSS</span>
-          <span class="skill-tag">Framer Motion</span>
-          <span class="skill-tag">HTML5</span>
-          <span class="skill-tag">CSS3</span>
+          <span class="skill-tag">⚛ React</span>
+          <span class="skill-tag">⚡ Vite</span>
+          <span class="skill-tag">🎨 Tailwind</span>
+          <span class="skill-tag">✨ Framer</span>
+          <span class="skill-tag">&lt;/&gt; HTML</span>
+          <span class="skill-tag">{ } CSS</span>
         </div>
       </div>
       <div class="skill-card reveal reveal-delay-2">
         <p class="skill-card-title">Backend</p>
         <div class="skill-tags">
-          <span class="skill-tag">Django</span>
-          <span class="skill-tag">DRF</span>
-          <span class="skill-tag">Node.js</span>
-          <span class="skill-tag">Express.js</span>
-          <span class="skill-tag">REST APIs</span>
+          <span class="skill-tag">🐍 Django</span>
+          <span class="skill-tag">⚙ DRF</span>
+          <span class="skill-tag">🟢 Node</span>
+          <span class="skill-tag">🚀 Express</span>
+          <span class="skill-tag">🔌 REST</span>
         </div>
       </div>
       <div class="skill-card reveal">
         <p class="skill-card-title">Database</p>
         <div class="skill-tags">
-          <span class="skill-tag">SQLite</span>
-          <span class="skill-tag">Supabase</span>
-          <span class="skill-tag">Firebase</span>
-          <span class="skill-tag">JSON Storage</span>
+          <span class="skill-tag">🗃 SQLite</span>
+          <span class="skill-tag">☁ Supabase</span>
+          <span class="skill-tag">🔥 Firebase</span>
+          <span class="skill-tag">📦 JSON</span>
         </div>
       </div>
       <div class="skill-card reveal reveal-delay-1">
         <p class="skill-card-title">Tools</p>
         <div class="skill-tags">
-          <span class="skill-tag">Git</span>
-          <span class="skill-tag">GitHub</span>
-          <span class="skill-tag">VS Code</span>
-          <span class="skill-tag">ESP32</span>
-          <span class="skill-tag">Arduino IDE</span>
-          <span class="skill-tag">Google AI Studio</span>
-          <span class="skill-tag">Claude</span>
+          <span class="skill-tag">🧩 Git</span>
+          <span class="skill-tag">🐙 GitHub</span>
+          <span class="skill-tag">💻 VS Code</span>
+          <span class="skill-tag">📡 ESP32</span>
+          <span class="skill-tag">🔧 Arduino</span>
+          <span class="skill-tag">🤖 AI Studio</span>
+          <span class="skill-tag">🧠 Claude</span>
         </div>
       </div>
       <div class="skill-card reveal reveal-delay-2">
         <p class="skill-card-title">Concepts</p>
         <div class="skill-tags">
-          <span class="skill-tag">DSA</span>
-          <span class="skill-tag">OOP</span>
-          <span class="skill-tag">DBMS</span>
-          <span class="skill-tag">Auth Systems</span>
-          <span class="skill-tag">Responsive Design</span>
-          <span class="skill-tag">API Dev</span>
+          <span class="skill-tag">🧠 DSA</span>
+          <span class="skill-tag">🧱 OOP</span>
+          <span class="skill-tag">🗄 DBMS</span>
+          <span class="skill-tag">🔐 Auth</span>
+          <span class="skill-tag">📱 Responsive</span>
+          <span class="skill-tag">🔗 API</span>
         </div>
       </div>
     </div>
@@ -1231,27 +1222,27 @@
     <div class="skill-bars reveal">
       <h3 class="skill-bars-title">Proficiency Overview</h3>
       <div class="bar-item">
-        <div class="bar-label"><span>C</span><span>90%</span></div>
+        <div class="bar-label"><span>C</span><span>95%</span></div>
         <div class="bar-track"><div class="bar-fill" data-width="90"></div></div>
       </div>
       <div class="bar-item">
-        <div class="bar-label"><span>C++</span><span>80%</span></div>
+        <div class="bar-label"><span>C++</span><span>90%</span></div>
         <div class="bar-track"><div class="bar-fill" data-width="80"></div></div>
       </div>
       <div class="bar-item">
-        <div class="bar-label"><span>Python</span><span>70%</span></div>
+        <div class="bar-label"><span>Python</span><span>80%</span></div>
         <div class="bar-track"><div class="bar-fill" data-width="70"></div></div>
       </div>
       <div class="bar-item">
-        <div class="bar-label"><span>HTML5</span><span>60%</span></div>
+        <div class="bar-label"><span>HTML5</span><span>70%</span></div>
         <div class="bar-track"><div class="bar-fill" data-width="60"></div></div>
       </div>
       <div class="bar-item">
-        <div class="bar-label"><span>JavaScript</span><span>50%</span></div>
+        <div class="bar-label"><span>JavaScript</span><span>60%</span></div>
         <div class="bar-track"><div class="bar-fill" data-width="50"></div></div>
       </div>
       <div class="bar-item">
-        <div class="bar-label"><span>CSS3</span><span>40%</span></div>
+        <div class="bar-label"><span>CSS3</span><span>60%</span></div>
         <div class="bar-track"><div class="bar-fill" data-width="40"></div></div>
       </div>
     </div>
