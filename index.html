@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
 <style>
   /* ── Reset & Base ─────────────────────────────── */
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -660,19 +662,64 @@
     margin-bottom: 1rem;
   }
 
+  /* Individual technology tiles — inspired by the clean icon-card layout */
   .skill-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: .45rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
+    gap: .7rem;
   }
 
   .skill-tag {
-    font-size: .75rem;
-    color: var(--muted);
+    min-height: 68px;
+    padding: .75rem .8rem;
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+    font-size: .78rem;
+    font-weight: 500;
+    color: var(--white);
+    background: rgba(255,255,255,.035);
+    border: 1px solid rgba(201,169,110,.14);
+    border-radius: 10px;
+    transition: transform .2s ease, border-color .2s ease, background .2s ease;
+  }
+
+  .skill-tag:hover {
+    transform: translateY(-3px);
+    border-color: rgba(201,169,110,.42);
     background: rgba(201,169,110,.07);
-    border: 1px solid rgba(201,169,110,.15);
-    padding: .3rem .65rem;
-    border-radius: 2px;
+  }
+
+  .skill-tag i {
+    width: 32px;
+    min-width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.45rem;
+    line-height: 1;
+  }
+
+  .skill-tag .fa-solid,
+  .skill-tag .fa-brands {
+    font-size: 1.25rem;
+  }
+
+  /* Social icon buttons */
+  .social-icon-btn {
+    width: 46px;
+    height: 46px;
+    padding: 0;
+    justify-content: center;
+    font-size: 1.15rem;
+    letter-spacing: 0;
+  }
+  .social-icon-btn span {
+    display: none;
+  }
+  .social-icon-btn:hover {
+    transform: translateY(-2px);
   }
 
   /* Skill bars */
@@ -1083,7 +1130,7 @@
       <!-- Floating skill badges -->
       <span class="skill-float sf-react">⚛ React</span>
       <span class="skill-float sf-django">🐍 Django</span>
-      <span class="skill-float sf-cpp">⚡ C++</span>
+      <span class="skill-float sf-cpp"><i class="devicon-cplusplus-plain"></i> C++</span>
       <span class="skill-float sf-ai">🤖 AI / ML</span>
       <span class="skill-float sf-esp">📡 ESP32</span>      
       <!-- Central avatar ring -->
@@ -1137,7 +1184,12 @@
           <a href="./Argav-CV.pdf" class="btn btn-gold" download>
     ↓ Download CV
 </a>
-          <a href="https://github.com/argavthakur-maker" target="_blank" rel="noopener" class="btn btn-outline">GitHub Profile →</a>
+          <a href="https://github.com/argavthakur-maker" target="_blank" rel="noopener" class="btn btn-outline social-icon-btn" aria-label="GitHub" title="GitHub">
+            <i class="fa-brands fa-github"></i><span>GitHub</span>
+          </a>
+          <a href="YOUR_LINKEDIN_URL" target="_blank" rel="noopener" class="btn btn-outline social-icon-btn" aria-label="LinkedIn" title="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span>
+          </a>
         </div>
       </div>
       <div class="reveal reveal-delay-1">
@@ -1159,63 +1211,68 @@
       <div class="skill-card reveal">
         <p class="skill-card-title">Languages</p>
         <div class="skill-tags">
-          <span class="skill-tag">🔵 C</span>
-          <span class="skill-tag">⚡ C++</span>
-          <span class="skill-tag">🟨 JavaScript</span>
-          <span class="skill-tag">🐍 Python</span>
+          <span class="skill-tag"><i class="devicon-c-plain colored"></i>C</span>
+          <span class="skill-tag"><i class="devicon-cplusplus-plain colored"></i>C++</span>
+          <span class="skill-tag"><i class="devicon-javascript-plain colored"></i>JavaScript</span>
+          <span class="skill-tag"><i class="devicon-python-plain colored"></i>Python</span>
         </div>
       </div>
+
       <div class="skill-card reveal reveal-delay-1">
         <p class="skill-card-title">Frontend</p>
         <div class="skill-tags">
-          <span class="skill-tag">⚛ React</span>
-          <span class="skill-tag">⚡ Vite</span>
-          <span class="skill-tag">🎨 Tailwind</span>
-          <span class="skill-tag">✨ Framer</span>
-          <span class="skill-tag">&lt;/&gt; HTML</span>
-          <span class="skill-tag">{ } CSS</span>
+          <span class="skill-tag"><i class="devicon-react-original colored"></i>React</span>
+          <span class="skill-tag"><i class="devicon-vitejs-plain colored"></i>Vite</span>
+          <span class="skill-tag"><i class="devicon-tailwindcss-original colored"></i>Tailwind</span>
+          <span class="skill-tag"><i class="devicon-framermotion-original"></i>Framer</span>
+          <span class="skill-tag"><i class="devicon-html5-plain colored"></i>HTML</span>
+          <span class="skill-tag"><i class="devicon-css3-plain colored"></i>CSS</span>
         </div>
       </div>
+
       <div class="skill-card reveal reveal-delay-2">
         <p class="skill-card-title">Backend</p>
         <div class="skill-tags">
-          <span class="skill-tag">🐍 Django</span>
-          <span class="skill-tag">⚙ DRF</span>
-          <span class="skill-tag">🟢 Node</span>
-          <span class="skill-tag">🚀 Express</span>
-          <span class="skill-tag">🔌 REST</span>
+          <span class="skill-tag"><i class="devicon-django-plain colored"></i>Django</span>
+          <span class="skill-tag"><i class="fa-solid fa-layer-group"></i>DRF</span>
+          <span class="skill-tag"><i class="devicon-nodejs-plain colored"></i>Node.js</span>
+          <span class="skill-tag"><i class="devicon-express-original"></i>Express</span>
+          <span class="skill-tag"><i class="fa-solid fa-plug"></i>REST</span>
         </div>
       </div>
+
       <div class="skill-card reveal">
         <p class="skill-card-title">Database</p>
         <div class="skill-tags">
-          <span class="skill-tag">🗃 SQLite</span>
-          <span class="skill-tag">☁ Supabase</span>
-          <span class="skill-tag">🔥 Firebase</span>
-          <span class="skill-tag">📦 JSON</span>
+          <span class="skill-tag"><i class="devicon-sqlite-plain colored"></i>SQLite</span>
+          <span class="skill-tag"><i class="devicon-supabase-plain colored"></i>Supabase</span>
+          <span class="skill-tag"><i class="devicon-firebase-plain colored"></i>Firebase</span>
+          <span class="skill-tag"><i class="fa-solid fa-file-code"></i>JSON</span>
         </div>
       </div>
+
       <div class="skill-card reveal reveal-delay-1">
         <p class="skill-card-title">Tools</p>
         <div class="skill-tags">
-          <span class="skill-tag">🧩 Git</span>
-          <span class="skill-tag">🐙 GitHub</span>
-          <span class="skill-tag">💻 VS Code</span>
-          <span class="skill-tag">📡 ESP32</span>
-          <span class="skill-tag">🔧 Arduino</span>
-          <span class="skill-tag">🤖 AI Studio</span>
-          <span class="skill-tag">🧠 Claude</span>
+          <span class="skill-tag"><i class="devicon-git-plain colored"></i>Git</span>
+          <span class="skill-tag"><i class="devicon-github-original"></i>GitHub</span>
+          <span class="skill-tag"><i class="devicon-vscode-plain colored"></i>VS Code</span>
+          <span class="skill-tag"><i class="fa-solid fa-microchip"></i>ESP32</span>
+          <span class="skill-tag"><i class="devicon-arduino-plain colored"></i>Arduino</span>
+          <span class="skill-tag"><i class="fa-solid fa-robot"></i>AI Studio</span>
+          <span class="skill-tag"><i class="fa-solid fa-brain"></i>Claude</span>
         </div>
       </div>
+
       <div class="skill-card reveal reveal-delay-2">
         <p class="skill-card-title">Concepts</p>
         <div class="skill-tags">
-          <span class="skill-tag">🧠 DSA</span>
-          <span class="skill-tag">🧱 OOP</span>
-          <span class="skill-tag">🗄 DBMS</span>
-          <span class="skill-tag">🔐 Auth</span>
-          <span class="skill-tag">📱 Responsive</span>
-          <span class="skill-tag">🔗 API</span>
+          <span class="skill-tag"><i class="fa-solid fa-code"></i>DSA</span>
+          <span class="skill-tag"><i class="fa-solid fa-cubes"></i>OOP</span>
+          <span class="skill-tag"><i class="fa-solid fa-database"></i>DBMS</span>
+          <span class="skill-tag"><i class="fa-solid fa-lock"></i>Auth</span>
+          <span class="skill-tag"><i class="fa-solid fa-mobile-screen-button"></i>Responsive</span>
+          <span class="skill-tag"><i class="fa-solid fa-link"></i>API</span>
         </div>
       </div>
     </div>
@@ -1359,14 +1416,14 @@
     </h2>
     <p class="contact-sub reveal">Open to internships, collaborations, and hackathon teams</p>
     <div class="contact-btns reveal reveal-delay-1">
-      <a href="https://github.com/argavthakur-maker" target="_blank" rel="noopener" class="btn btn-gold">GitHub: argavthakur-maker →</a>
+      <a href="https://github.com/argavthakur-maker" target="_blank" rel="noopener" class="btn btn-gold"><i class="fa-brands fa-github"></i> GitHub</a>
       <a href="mailto:argav@example.com" class="btn btn-outline">Send a Message</a>
     </div>
 
     <div class="footer-divider reveal"></div>
     <footer>
       <p class="footer-inner">
-        © 2025 <a href="#hero">Argav Thakur</a> · CSE @ LPU
+        © 2026 <a href="#hero">Argav Thakur</a> · CSE @ LPU
       </p>
     </footer>
   </div>
